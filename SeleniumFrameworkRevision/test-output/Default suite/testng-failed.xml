@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNG.Parameterization">
+      <class name="TestNG.DataProviderAnnotation">
         <methods>
-          <include name="tearDown"/>
-          <include name="urlValidation"/>
-          <include name="loginValidation"/>
-          <include name="titleValidation"/>
           <include name="launchBrowser"/>
-          <include name="logout"/>
-          <include name="adminTabValidation"/>
+          <include name="loginValidation" invocation-numbers="1 2 3"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestNG.Parameterization -->
+      </class> <!-- TestNG.DataProviderAnnotation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
